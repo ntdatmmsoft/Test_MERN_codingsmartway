@@ -23,9 +23,9 @@ export default class TodoTableRow extends Component {
     render() {
         return (
             <tr>
-                <td>{this.props.todo.todo_description}</td>
-                <td>{this.props.todo.todo_responsible}</td>
-                <td>{this.props.todo.todo_priority}</td>
+                <td className={this.props.todo.todo_completed ? 'completed' : ''}>{this.props.todo.todo_description}</td>
+                <td className={this.props.todo.todo_completed ? 'completed' : ''}>{this.props.todo.todo_responsible}</td>
+                <td className={this.props.todo.todo_completed ? 'completed' : ''}>{this.props.todo.todo_priority}</td>
                 <td>
                     <Link class="edit-link" to={"/edit/" + this.props.todo._id}>
                         Edit
